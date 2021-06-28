@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.home.delivery.DeliveryActivity">
+
+  <View
+    android:id="@+id/backgroundTop"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/background_blue"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/line" />
+
+  <View
+    android:id="@+id/line"
+    android:layout_width="0dp"
+    android:layout_height="24dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    tools:src="@drawable/ic_place_holder"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    tools:text="Udin Petot"
+    app:layout_constraintTop_toTopOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPhone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textSize="12sp"
+    android:textColor="@color/frenchPass"
+    tools:text="628129192819"
+    app:layout_constraintBottom_toBottomOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNameBuilding"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@color/ebonyClay"
+    tools:text="TSM Building"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/backgroundTop" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.5"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleOffice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="14sp"
+    android:text="Kantor Penerima"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textNameBuilding" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textOffice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:textColor="@color/ebonyClay"
+    tools:text="FIF Buandung"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleOffice" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitlePic"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="14sp"
+    android:text="Nama PIC Cabang"
+    app:layout_constraintStart_toEndOf="@id/guideLine"
+    app:layout_constraintTop_toBottomOf="@id/textNameBuilding" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPic"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:textColor="@color/ebonyClay"
+    tools:text="Atang tangtang"
+    app:layout_constraintStart_toEndOf="@id/guideLine"
+    app:layout_constraintTop_toBottomOf="@id/textTitlePic" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleBranch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="14sp"
+    android:text="Nama Cabang"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textOffice" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textBranch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="14sp"
+    tools:text="Jl. Maksarudin"
+    android:textStyle="bold"
+    android:textColor="@color/ebonyClay"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleBranch" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleNumberPic"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:text="Kontak PIC Cabang"
+    android:textSize="14sp"
+    app:layout_constraintStart_toEndOf="@id/guideLine"
+    app:layout_constraintTop_toBottomOf="@id/textPic"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNumberPic"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    android:text="Kontak PIC Cabang"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:textColor="@color/ebonyClay"
+    app:layout_constraintStart_toEndOf="@id/guideLine"
+    app:layout_constraintTop_toBottomOf="@id/textTitleNumberPic"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

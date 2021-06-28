@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "399110170740",
+    "project_id": "suntiq-matel",
+    "storage_bucket": "suntiq-matel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399110170740:android:8bc78a9d43fc142f9a8921",
+        "android_client_info": {
+          "package_name": "id.jsu.suntiq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399110170740-dr6rfk7n434gpc78rt6c555uce0iltrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.jsu.suntiq",
+            "certificate_hash": "2759a580b06f2af18ed930c26e1248bc6f73549d"
+          }
+        },
+        {
+          "client_id": "399110170740-agn99ekr2gfu8seog1g857qqkidfu16i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC85HjegWjZ8XGtJ0kNprRz40YZLEA6DS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399110170740-agn99ekr2gfu8seog1g857qqkidfu16i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

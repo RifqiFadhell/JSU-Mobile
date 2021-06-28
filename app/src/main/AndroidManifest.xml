@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="id.jsu.suntiq">
+
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.JSU">
+    <activity android:name=".ui.home.delivery.DeliveryActivity"></activity>
+    <activity android:name=".ui.home.duty.DutyLetterActivity" />
+    <activity android:name=".ui.home.confirmation.ConfirmationVehicleActivity" />
+    <activity android:name=".ui.intro.IntroActivity" />
+    <activity android:name=".ui.intro.register.verify.VerifyRegisterActivity" />
+    <activity
+      android:name=".ui.MainActivity"
+      android:label="@string/app_name"
+      android:theme="@style/Theme.JSU">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>

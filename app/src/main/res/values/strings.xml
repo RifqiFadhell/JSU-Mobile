@@ -1,0 +1,84 @@
+<resources>
+  <string name="app_name">SuntiQ</string>
+  <string name="loading_dialog_add">Mohon tunggu sebentar...</string>
+  <string name="app_label">SuntiQ</string>
+  <string name="login_label">Masuk</string>
+  <string name="register_label">Daftar</string>
+  <string name="next_label">Lanjutkan</string>
+  <string name="save_label">Simpan</string>
+  <string name="done_label">Selesai</string>
+  <string name="change_label">Ubah</string>
+  <string name="cancel_label">Batal</string>
+  <string name="send_label">Antar Unit</string>
+  <string name="yes_label">Ya</string>
+  <string name="no_label">Tidak</string>
+  <string name="photo_uploaded">Photo Uploaded</string>
+  <string name="duty_letter">Surat Tugas</string>
+  <string name="duty_letter_title">Lakukan Foto dikantor</string>
+
+  <string name="forgot_password_label">Request Password</string>
+  <string name="forgot_password_title">Forgot Password</string>
+  <string name="forgot_password_caption">Send your whatsapp number &amp; get your new password.</string>
+  <string name="forgot_password_input_whatsapp">Masukkan nomor whatsapp</string>
+  <string name="forgot_password_input_code">Masukkan Kode</string>
+  <string name="forgot_password_code">Ulangi Kode berikut</string>
+
+  <!--Intro-->
+  <string name="intro_title">Welcome to</string>
+  <string name="intro_caption">We help you solved The Problem</string>
+  <string name="intro_caption_button">Create an Account</string>
+  <string name="intro_caption_login">Sudah punya akun ? <b><font color="#29B6F2">Login</font></b></string>
+
+  <!--Register - Login-->
+  <string name="login_title">Welcome Back!</string>
+  <string name="login_caption">I’m so happy to see. You can Login and continue.</string>
+  <string name="login_input_password">Masukkan password</string>
+  <string name="login_title_load_data">Loading Data</string>
+  <string name="login_caption_load_data">Please wait a couple time, we still loading your data.</string>
+  <string name="login_caption_uploading">Uploading.. .. %1$s</string>
+
+  <string name="register_title">Create an Account</string>
+  <string name="register_complete_title">Complete Profile</string>
+  <string name="register_verify_title">Face Verification</string>
+  <string name="register_caption">Create an account so you can use SuntiQ!</string>
+  <string name="register_verify_caption">Show your photos so we can verify you.</string>
+  <string name="register_input_repeat_password">Konfirmasi password</string>
+  <string name="register_input_password">Buat password</string>
+  <string name="register_input_phone">Masukkan nomor hp</string>
+  <string name="register_input_name">Masukkan nama lengkap</string>
+  <string name="register_input_birth_location">Masukkan tempat lahir</string>
+  <string name="register_input_date_location">Masukkan tanggal lahir</string>
+  <string name="register_input_bank_number">Masukkan nomor rekening</string>
+  <string name="register_input_number_id">Masukkan NIK</string>
+
+  <string name="register_caption_forgot_password">Lupa password?</string>
+  <string name="register_caption_already_account">Belum punya akun? <b>Buat Akun</b></string>
+
+  <!--Home-->
+  <string name="home_title">Halo, <b>%1$s</b></string>
+  <string name="home_input_search">Cari NoPol / NoSin / NoKa</string>
+  <string name="home_caption">Pencarian Data</string>
+  <string name="home_result">Kami menemukan <b>%1$s</b> hasil dari <b>%2$s</b></string>
+  <string name="home_caption_call">Apabila anda ingin mengupload data melalui aplikasi kami dapat menghubungi admin Telp/Whatsapp %1$s</string>
+  <string name="home_title_bottom_sheet">Data Kendaraan</string>
+  <string name="home_type_bottom_sheet">Tipe Kendaraan</string>
+  <string name="home_number_bottom_sheet">Nomor Kendaraan</string>
+  <string name="home_mark_bottom_sheet">Merk Kendaraan</string>
+  <string name="home_color_bottom_sheet">Warna Kendaraan</string>
+  <string name="home_year_bottom_sheet">Tahun</string>
+  <string name="home_leasing_bottom_sheet">Leasing</string>
+  <string name="home_from_bottom_sheet">Sumber Data</string>
+  <string name="home_confirmation_bottom_sheet">Apakah data akan diproses melalui PT. Jasa Saga Utama?</string>
+  <string name="home_template_bottom_sheet">:  %1$s</string>
+
+  <!--Confirmation-->
+  <string name="confirmation_title">Pilih Jenis kendaraan</string>
+  <string name="confirmation_motorcycle">Motor (R2)</string>
+  <string name="confirmation_car">Mobil (R4)</string>
+  <string name="confirmation_add_photo_unit">Tambahkan Foto Unit 2 Sisi</string>
+  <string name="confirmation_add_photo_id">Tambahkan Foto STNK</string>
+  <string name="confirmation_add_location">Tentukan Lokasi Pengantaran Kendaraan</string>
+  <string name="confirmation_hint_add_location">Masukkan lokasi</string>
+  <string name="confirmation_button_next">Antar Unit</string>
+
+</resources>

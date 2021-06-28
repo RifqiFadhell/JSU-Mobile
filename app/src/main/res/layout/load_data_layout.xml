@@ -1,0 +1,73 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/pictonBlue"
+  tools:context=".ui.intro.register.RegisterFormFragment">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:scaleType="fitXY"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_triangle_background_white" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitle"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xxxx"
+    android:text="@string/login_title_load_data"
+    android:textColor="@color/white"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaption"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin_huge"
+    android:text="@string/login_caption_load_data"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+  <androidx.appcompat.widget.AppCompatImageButton
+    android:id="@+id/imageUpload"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:srcCompat="@drawable/ic_add_image"
+    android:background="@android:color/transparent"
+    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textCaption" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaptionLoading"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin_huge"
+    android:text="@string/login_caption_uploading"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/imageUpload" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

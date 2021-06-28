@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:background="@drawable/background_bottom_sheet">
+
+  <View
+    android:id="@+id/view"
+    android:layout_width="80dp"
+    android:layout_height="4dp"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:background="@color/alto"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/buttonClose"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:srcCompat="@drawable/ic_close"
+    android:padding="@dimen/default_padding_margin_h"
+    app:layout_constraintTop_toTopOf="@id/view"
+    app:layout_constraintBottom_toBottomOf="@id/view"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:textColor="@color/ebonyClay"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:text="@string/home_title_bottom_sheet"
+    app:layout_constraintTop_toBottomOf="@id/view"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    tools:src="@drawable/ic_place_holder"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    app:layout_constraintTop_toBottomOf="@id/textTitle"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNumberPlate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textStyle="bold"
+    tools:text="F6521DP"
+    android:textColor="@color/pictonBlue"
+    app:layout_constraintTop_toTopOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNameVehicle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="12sp"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    tools:text="F6521DP"
+    app:layout_constraintBottom_toBottomOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image"/>
+
+  <View
+    android:id="@+id/background"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/background_rounded_gray"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image"
+    app:layout_constraintBottom_toBottomOf="@id/textTitleFrom"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleType"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xxx"
+    android:layout_marginTop="@dimen/default_padding_margin_xxx"
+    android:text="@string/home_type_bottom_sheet"
+    android:textSize="14sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleColor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xxx"
+    android:layout_marginTop="8dp"
+    android:text="@string/home_color_bottom_sheet"
+    android:textSize="14sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleType" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleYear"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xxx"
+    android:layout_marginTop="8dp"
+    android:text="@string/home_year_bottom_sheet"
+    android:textSize="14sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleColor" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleLeasing"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xxx"
+    android:layout_marginTop="8dp"
+    android:text="@string/home_leasing_bottom_sheet"
+    android:textSize="14sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleYear" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleFrom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xxx"
+    android:layout_marginTop="8dp"
+    android:text="@string/home_from_bottom_sheet"
+    android:textSize="14sp"
+    android:paddingBottom="@dimen/default_padding_margin_x"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleLeasing" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintGuide_percent="0.45"
+    android:orientation="vertical"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textType"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xxx"
+    android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+    android:textColor="@color/black"
+    android:textSize="14sp"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textColor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+    android:textColor="@color/black"
+    android:textSize="14sp"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintTop_toBottomOf="@id/textType" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textYear"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+    android:textColor="@color/black"
+    android:textSize="14sp"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintTop_toBottomOf="@id/textColor" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textLeasing"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+    android:textColor="@color/black"
+    android:textSize="14sp"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintTop_toBottomOf="@id/textYear" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textFrom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+    android:textColor="@color/black"
+    android:textSize="14sp"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintTop_toBottomOf="@id/textLeasing" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textConfirmation"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textColor="@color/mineShaft"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:text="@string/home_confirmation_bottom_sheet"
+    app:layout_constraintTop_toBottomOf="@id/background"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <CheckBox
+    android:id="@+id/checkYes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/yes_label"
+    android:paddingStart="@dimen/default_padding_margin"
+    android:paddingEnd="@dimen/default_padding_margin"
+    android:button="@drawable/custom_checkbox"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textConfirmation"/>
+
+  <CheckBox
+    android:id="@+id/checkNo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/no_label"
+    android:paddingStart="@dimen/default_padding_margin"
+    android:paddingEnd="@dimen/default_padding_margin"
+    android:button="@drawable/custom_checkbox"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    app:layout_constraintStart_toEndOf="@id/checkYes"
+    app:layout_constraintTop_toBottomOf="@id/textConfirmation"/>
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonSubmit"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:backgroundTint="@color/kournikova"
+    android:text="@string/next_label"
+    android:textAllCaps="false"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:layout_marginBottom="@dimen/default_padding_margin_x"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/checkYes"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

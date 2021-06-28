@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/wildSand"
+  tools:context=".ui.home.duty.DutyLetterActivity">
+
+  <View
+    android:id="@+id/backgroundTop"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/background_blue"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/line" />
+
+  <View
+    android:id="@+id/line"
+    android:layout_width="0dp"
+    android:layout_height="24dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    tools:src="@drawable/ic_place_holder"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    tools:text="Udin Petot"
+    app:layout_constraintTop_toTopOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPhone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textSize="12sp"
+    android:textColor="@color/frenchPass"
+    tools:text="628129192819"
+    app:layout_constraintBottom_toBottomOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <View
+    android:id="@+id/backgroundMiddle"
+    android:layout_width="0dp"
+    android:layout_height="72dp"
+    android:background="@color/white"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/line" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@color/ebonyClay"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:text="@string/duty_letter_title"
+    app:layout_constraintTop_toTopOf="@id/backgroundMiddle"
+    app:layout_constraintBottom_toBottomOf="@id/backgroundMiddle"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/imageOffice"
+    android:layout_width="44dp"
+    android:layout_height="44dp"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    tools:src="@drawable/ic_place_holder_image"
+    app:layout_constraintTop_toTopOf="@id/backgroundMiddle"
+    app:layout_constraintBottom_toBottomOf="@id/backgroundMiddle"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonCancel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      style="@style/SecondaryButton"
+      android:layout_marginTop="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_x"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:paddingBottom="@dimen/default_padding_margin_h"
+      android:paddingTop="@dimen/default_padding_margin_h"
+      app:strokeColor="@color/kournikova"
+      android:text="@string/cancel_label"
+      android:textAllCaps="false"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintEnd_toStartOf="@id/buttonSubmit"/>
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonSubmit"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_x"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:paddingBottom="@dimen/default_padding_margin_h"
+      android:paddingTop="@dimen/default_padding_margin_h"
+      android:backgroundTint="@color/kournikova"
+      android:text="@string/next_label"
+      android:textAllCaps="false"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="@id/buttonCancel"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/buttonShare"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_share"
+    app:backgroundTint="@color/white"
+    android:layout_marginBottom="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:layout_constraintBottom_toTopOf="@id/buttonDownload"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/buttonDownload"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_download"
+    app:backgroundTint="@color/white"
+    android:layout_marginBottom="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:layout_constraintBottom_toTopOf="@id/layout"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

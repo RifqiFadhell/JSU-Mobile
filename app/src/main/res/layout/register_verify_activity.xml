@@ -1,0 +1,113 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.intro.register.RegisterFormFragment">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:scaleType="fitXY"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_triangle_background_blue" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitle"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xxxx"
+    android:text="@string/register_verify_title"
+    android:textColor="@color/ebonyClay"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaption"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin_huge"
+    android:text="@string/register_verify_caption"
+    android:textAlignment="center"
+    android:textColor="@color/dustyGray2"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+  <androidx.appcompat.widget.AppCompatImageButton
+    android:id="@+id/imageUpload"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:srcCompat="@drawable/ic_add_image"
+    android:background="@android:color/transparent"
+    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textCaption" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textUploaded"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin_huge"
+    android:text="@string/photo_uploaded"
+    android:textAlignment="center"
+    android:textColor="@color/ebonyClay"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:drawableEnd="@drawable/ic_verified"
+    android:drawablePadding="@dimen/default_padding_margin"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/imageUpload" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonChange"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    style="@style/SecondaryButton"
+    android:layout_marginBottom="@dimen/default_padding_margin_x"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    app:strokeColor="@color/kournikova"
+    android:text="@string/change_label"
+    android:textAllCaps="false"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintEnd_toStartOf="@id/buttonNext"/>
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonNext"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/default_padding_margin_x"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:backgroundTint="@color/kournikova"
+    android:text="@string/next_label"
+    android:textAllCaps="false"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toEndOf="@id/buttonChange"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

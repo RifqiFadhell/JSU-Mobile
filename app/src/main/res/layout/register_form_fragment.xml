@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.intro.register.RegisterFormFragment">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:scaleType="fitXY"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_triangle_background_blue" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitle"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xxxx"
+    android:text="@string/register_title"
+    android:textColor="@color/ebonyClay"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaption"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin_huge"
+    android:text="@string/register_caption"
+    android:textAlignment="center"
+    android:textColor="@color/dustyGray2"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputName"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textCaption"
+    app:startIconDrawable="@drawable/ic_user"
+    app:startIconTint="@color/dustyGray2">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/background_rounded_gray"
+      android:hint="@string/register_input_name"
+      android:inputType="number"
+      android:textColor="@color/white"
+      android:textColorHint="@color/dustyGray2" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputPhone"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInputName"
+    app:startIconDrawable="@drawable/ic_communication_white"
+    app:startIconTint="@color/dustyGray2">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editPhone"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/background_rounded_gray"
+      android:hint="@string/register_input_phone"
+      android:inputType="number"
+      android:textColor="@color/white"
+      android:textColorHint="@color/dustyGray2" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputPassword"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInputPhone"
+    app:passwordToggleEnabled="true"
+    app:passwordToggleTint="@color/dustyGray2"
+    app:startIconDrawable="@drawable/ic_password_white"
+    app:startIconTint="@color/dustyGray2">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editPassword"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/background_rounded_gray"
+      android:hint="@string/register_input_password"
+      android:inputType="textPassword"
+      android:textColor="@color/white"
+      android:textColorHint="@color/dustyGray2" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputRepeatPassword"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInputPassword"
+    app:passwordToggleEnabled="true"
+    app:passwordToggleTint="@color/dustyGray2"
+    app:startIconDrawable="@drawable/ic_password_white"
+    app:startIconTint="@color/dustyGray2">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editRepeatPassword"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/background_rounded_gray"
+      android:hint="@string/register_input_repeat_password"
+      android:inputType="textPassword"
+      android:textColor="@color/white"
+      android:textColorHint="@color/dustyGray2" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonLogin"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xx"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:backgroundTint="@color/kournikova"
+    android:text="@string/register_label"
+    android:textAllCaps="false"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    app:layout_constraintTop_toBottomOf="@id/textInputRepeatPassword"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textLogin"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/default_padding_margin_xxx"
+    android:layout_marginStart="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin_huge"
+    android:text="@string/intro_caption_login"
+    android:textAlignment="center"
+    android:textColor="@color/dustyGray2"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

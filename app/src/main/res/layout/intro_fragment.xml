@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.intro.IntroActivity">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/imageLogo"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginTop="@dimen/default_padding_margin_xxx"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_place_holder" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitle"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xxx"
+    android:text="@string/intro_title"
+    android:textColor="@color/ebonyClay"
+    android:textSize="40sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/imageLogo" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleApp"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/app_label"
+    android:textColor="@color/pictonBlue"
+    android:textSize="40sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaption"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xxh"
+    android:text="@string/intro_caption"
+    android:textColor="@color/dustyGray2"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleApp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textGoLogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/default_padding_margin_xx"
+    android:text="@string/intro_caption_login"
+    android:padding="@dimen/default_padding_margin"
+    android:textColor="@color/dustyGray2"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonRegister"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/kournikova"
+    android:text="@string/intro_caption_button"
+    android:textColor="@color/ebonyClay"
+    android:textAllCaps="false"
+    android:letterSpacing="0.02"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:layout_marginBottom="@dimen/default_padding_margin_xx"
+    android:layout_marginEnd="@dimen/default_padding_margin_huge"
+    android:layout_marginStart="@dimen/default_padding_margin_huge"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/textGoLogin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

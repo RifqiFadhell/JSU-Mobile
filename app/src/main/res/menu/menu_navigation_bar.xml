@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/homeDashboard"
+    android:icon="@drawable/ic_baseline_home_24"
+    android:title="Dashboard"
+    android:enabled="true"/>
+
+  <item
+    android:id="@+id/homeVisitors"
+    android:icon="@drawable/ic_baseline_people_24"
+    android:title="Pengunjung"
+    android:enabled="true"/>
+
+  <item
+    android:id="@+id/homeBuildings"
+    android:icon="@drawable/ic_baseline_apartment_24"
+    android:title="Gedung"
+    android:enabled="true"/>
+
+</menu>
