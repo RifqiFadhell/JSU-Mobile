@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+  android:id="@+id/layoutItem"
+  xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
+  android:layout_marginTop="@dimen/default_padding_margin_h"
+  android:background="@drawable/background_rounded_white"
   xmlns:tools="http://schemas.android.com/tools"
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <androidx.appcompat.widget.AppCompatImageView
+  <de.hdodenhof.circleimageview.CircleImageView
     android:id="@+id/image"
-    android:layout_width="48dp"
-    android:layout_height="48dp"
-    tools:src="@drawable/ic_place_holder"
-    android:layout_marginTop="@dimen/default_padding_margin_x"
-    android:layout_marginBottom="@dimen/default_padding_margin_x"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    tools:src="@drawable/ic_motorcycle"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginBottom="@dimen/default_padding_margin_h"
     android:layout_marginStart="@dimen/default_padding_margin_x"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -21,7 +25,7 @@
     android:id="@+id/textNumberPlate"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textSize="16sp"
+    android:textSize="18sp"
     android:layout_marginStart="@dimen/default_padding_margin_h"
     android:textStyle="bold"
     tools:text="F6521DP"
@@ -33,10 +37,20 @@
     android:id="@+id/textNameVehicle"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textSize="12sp"
+    android:textSize="14sp"
     android:layout_marginStart="@dimen/default_padding_margin_h"
     tools:text="F6521DP"
     app:layout_constraintBottom_toBottomOf="@id/image"
     app:layout_constraintStart_toEndOf="@id/image"/>
+
+  <View
+    android:layout_width="0dp"
+    android:layout_height="2dp"
+    android:background="@color/gray"
+    android:layout_marginStart="@dimen/default_padding_margin_xh"
+    android:layout_marginEnd="@dimen/default_padding_margin_xh"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

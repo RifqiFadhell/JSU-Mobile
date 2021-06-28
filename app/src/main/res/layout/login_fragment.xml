@@ -15,14 +15,14 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/ic_triangle_background_white" />
+    app:srcCompat="@drawable/ic_background_login" />
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textTitle"
     android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    android:layout_marginTop="@dimen/default_padding_margin_xxxx"
     android:text="@string/login_title"
     android:textColor="@color/white"
     android:textSize="24sp"
@@ -53,6 +53,7 @@
     android:layout_marginTop="@dimen/default_padding_margin_x"
     android:layout_marginStart="@dimen/default_padding_margin_x"
     android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:hintEnabled="false"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/textCaption"
@@ -65,6 +66,7 @@
       android:layout_height="wrap_content"
       android:background="@drawable/background_text_input_blue"
       android:hint="@string/register_input_phone"
+      android:maxLength="14"
       android:inputType="number"
       android:textColor="@color/white"
       android:textColorHint="@color/dustyGray2" />
@@ -83,6 +85,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/textInputPhone"
     app:passwordToggleEnabled="true"
+    app:hintEnabled="false"
     app:passwordToggleTint="@color/white"
     app:startIconDrawable="@drawable/ic_password_white"
     app:startIconTint="@color/white">

@@ -1,24 +1,24 @@
-package id.fadhell.testpayfazz.database
+package id.jsu.suntiq.preference.room
 
 import android.content.Context
 import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteOpenHelper
 
-@Database(entities = [NewsEntity::class], version = 1)
-abstract class NewsDatabase : RoomDatabase() {
+@Database(entities = [DataEntity::class], version = 1)
+abstract class DataDatabase : RoomDatabase() {
 
-    abstract fun newsDao(): NewsDao
+    abstract fun dataDao(): DataDao
 
     companion object {
-        private var instance: NewsDatabase? = null
+        private var instance: DataDatabase? = null
 
-        fun getInstance(context: Context): NewsDatabase? {
+        fun getInstance(context: Context): DataDatabase? {
             if (instance == null) {
-                synchronized(NewsDatabase::class.java) {
+                synchronized(DataDatabase::class.java) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
-                        NewsDatabase::class.java,
-                        "news.db"
+                        DataDatabase::class.java,
+                        "vehicle.db"
                     )
                         .build()
                 }

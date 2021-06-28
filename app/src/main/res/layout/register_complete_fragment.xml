@@ -14,17 +14,17 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/ic_triangle_background_blue" />
+    app:srcCompat="@drawable/ic_background_register" />
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textTitle"
-    android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/default_padding_margin_xxxx"
     android:text="@string/register_complete_title"
     android:textColor="@color/ebonyClay"
     android:textSize="24sp"
+    android:textStyle="bold"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/image" />
@@ -34,9 +34,10 @@
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/default_padding_margin_x"
     android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
     android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:hintEnabled="false"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/textTitle"
@@ -50,7 +51,8 @@
       android:background="@drawable/background_rounded_gray"
       android:hint="@string/register_input_number_id"
       android:inputType="number"
-      android:textColor="@color/white"
+      android:maxLength="16"
+      android:textColor="@color/ebonyClay"
       android:textColorHint="@color/dustyGray2" />
 
   </com.google.android.material.textfield.TextInputLayout>
@@ -60,9 +62,10 @@
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/default_padding_margin_h"
     android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
     android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:hintEnabled="false"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/textInputNumberId"
@@ -76,7 +79,7 @@
       android:background="@drawable/background_rounded_gray"
       android:hint="@string/register_input_birth_location"
       android:inputType="text"
-      android:textColor="@color/white"
+      android:textColor="@color/ebonyClay"
       android:textColorHint="@color/dustyGray2" />
 
   </com.google.android.material.textfield.TextInputLayout>
@@ -86,9 +89,10 @@
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/default_padding_margin_h"
     android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
     android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:hintEnabled="false"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/textInputLocation"
@@ -102,7 +106,47 @@
       android:background="@drawable/background_rounded_gray"
       android:hint="@string/register_input_date_location"
       android:inputType="text"
-      android:textColor="@color/white"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:textColor="@color/ebonyClay"
+      android:textColorHint="@color/dustyGray2" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Spinner
+    android:id="@+id/spinnerNameBank"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginStart="@dimen/default_padding_margin_xxx"
+    app:layout_constraintStart_toStartOf="@id/textInputNameBank"
+    app:layout_constraintEnd_toEndOf="@id/textInputNameBank"
+    app:layout_constraintTop_toTopOf="@id/textInputNameBank"
+    app:layout_constraintBottom_toBottomOf="@id/textInputNameBank"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputNameBank"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:hintEnabled="false"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInputDate"
+    app:startIconDrawable="@drawable/ic_card"
+    app:startIconTint="@color/dustyGray2">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editNameBank"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:background="@drawable/background_rounded_gray"
+      android:hint="@string/register_input_bank_name"
+      android:textColor="@color/ebonyClay"
       android:textColorHint="@color/dustyGray2" />
 
   </com.google.android.material.textfield.TextInputLayout>
@@ -112,12 +156,13 @@
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/default_padding_margin_h"
     android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
     android:layout_marginEnd="@dimen/default_padding_margin_x"
+    app:hintEnabled="false"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/textInputDate"
+    app:layout_constraintTop_toBottomOf="@id/textInputNameBank"
     app:startIconDrawable="@drawable/ic_card"
     app:startIconTint="@color/dustyGray2">
 
@@ -127,8 +172,8 @@
       android:layout_height="wrap_content"
       android:background="@drawable/background_rounded_gray"
       android:hint="@string/register_input_bank_number"
-      android:inputType="textPassword"
-      android:textColor="@color/white"
+      android:inputType="text"
+      android:textColor="@color/ebonyClay"
       android:textColorHint="@color/dustyGray2" />
 
   </com.google.android.material.textfield.TextInputLayout>
@@ -137,18 +182,18 @@
     android:id="@+id/buttonNext"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/default_padding_margin_xx"
     android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xx"
     android:layout_marginEnd="@dimen/default_padding_margin_x"
-    android:paddingBottom="@dimen/default_padding_margin_h"
-    android:paddingTop="@dimen/default_padding_margin_h"
     android:backgroundTint="@color/kournikova"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingBottom="@dimen/default_padding_margin_h"
     android:text="@string/register_label"
     android:textAllCaps="false"
     android:textColor="@color/black"
     android:textStyle="bold"
     app:layout_constraintTop_toBottomOf="@id/textInputNumberBank"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+    app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

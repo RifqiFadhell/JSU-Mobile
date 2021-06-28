@@ -35,13 +35,17 @@
   <string name="login_input_password">Masukkan password</string>
   <string name="login_title_load_data">Loading Data</string>
   <string name="login_caption_load_data">Please wait a couple time, we still loading your data.</string>
-  <string name="login_caption_uploading">Uploading.. .. %1$s</string>
+  <string name="login_caption_uploading">Uploading.....</string>
 
   <string name="register_title">Create an Account</string>
   <string name="register_complete_title">Complete Profile</string>
-  <string name="register_verify_title">Face Verification</string>
+  <string name="register_verify_title">Verifikasi Muka</string>
+  <string name="register_verify_id_title">Verifikasi KTP</string>
+  <string name="register_verify_success_title">Pendaftaran Berhasil</string>
   <string name="register_caption">Create an account so you can use SuntiQ!</string>
-  <string name="register_verify_caption">Show your photos so we can verify you.</string>
+  <string name="register_verify_caption">Tunjukan foto muka kamu untuk kami verifikasi</string>
+  <string name="register_verify_id_caption">Tunjukan foto Ktp kamu untuk kami verifikasi.</string>
+  <string name="register_verify_success_caption">Pendaftaranmu berhasil , Silahkan Konfirmasi kepada Admin di Nomor Whatsapp <a href="https://wa.me/628161826209">Klik Disini</a></string>
   <string name="register_input_repeat_password">Konfirmasi password</string>
   <string name="register_input_password">Buat password</string>
   <string name="register_input_phone">Masukkan nomor hp</string>
@@ -49,6 +53,7 @@
   <string name="register_input_birth_location">Masukkan tempat lahir</string>
   <string name="register_input_date_location">Masukkan tanggal lahir</string>
   <string name="register_input_bank_number">Masukkan nomor rekening</string>
+  <string name="register_input_bank_name">Pilih Bank</string>
   <string name="register_input_number_id">Masukkan NIK</string>
 
   <string name="register_caption_forgot_password">Lupa password?</string>
@@ -67,9 +72,11 @@
   <string name="home_color_bottom_sheet">Warna Kendaraan</string>
   <string name="home_year_bottom_sheet">Tahun</string>
   <string name="home_leasing_bottom_sheet">Leasing</string>
-  <string name="home_from_bottom_sheet">Sumber Data</string>
+  <string name="home_from_bottom_sheet">Nomor Rangka</string>
+  <string name="home_engine_bottom_sheet">Nomor Mesin</string>
   <string name="home_confirmation_bottom_sheet">Apakah data akan diproses melalui PT. Jasa Saga Utama?</string>
   <string name="home_template_bottom_sheet">:  %1$s</string>
+  <string name="home_template_dialog">Ingin memproses kendaraan ini ? <b>%1$s</b></string>
 
   <!--Confirmation-->
   <string name="confirmation_title">Pilih Jenis kendaraan</string>
@@ -80,5 +87,40 @@
   <string name="confirmation_add_location">Tentukan Lokasi Pengantaran Kendaraan</string>
   <string name="confirmation_hint_add_location">Masukkan lokasi</string>
   <string name="confirmation_button_next">Antar Unit</string>
+  <string name="confirmation_title_identification">Identitas Penerima</string>
+  <string name="confirmation_input_name">Nama Penerima</string>
+  <string name="confirmation_input_phone">Nomor Hp Penerima</string>
+  <string name="confirmation_input_role">Jabatan Penerima</string>
+  <string name="confirmation_add_office">Foto Kantor Penerima</string>
+  <string name="confirmation_title_office">Kantor Penerima</string>
+  <string name="confirmation_title_receiver">Foto Penerima</string>
+  <string name="confirmation_title_number">Foto No Rangka/No Mesin</string>
+  <string name="confirmation_office">Kantor Penerima</string>
+  <string name="confirmation_branch">Nama PIC Cabang</string>
+  <string name="confirmation_name_branch">Nama Cabang</string>
+  <string name="confirmation_number_branch">Kontak PIC Cabang</string>
+
+  <!--Delivery-->
+  <string name="delivery_button_title">Mulai Pengantaran</string>
+  <string name="delivery_title">Lokasi Pengantaran</string>
+  <string name="delivery_title_time">Jam Operasional :</string>
+
+  <!-- Form-->
+  <string name="delivery_form_title">Unggah Foto Serah Terima Kendaraan</string>
+  <string name="delivery_form_photo_handover">Foto serah terima kendaraan</string>
+  <string name="delivery_form_photo_unit">Foto unit 4 sisi</string>
+  <string name="delivery_form_photo_signature">Foto saat tanda tangan BASTK</string>
+  <string name="delivery_form_photo_sign">Foto BASTK yang telah ditandatangani ketiga pihak (Penerima, Mitra Pemilik) Kendaraan.</string>
+  <string name="delivery_form_photo_with_user">Foto bersama Penerima, Mitra, Pemilik (beserta) kendaraannya di depan kantor</string>
+
+  <!--Cancellation-->
+  <string name="cancellation_title">Lengkapi data dibawah ini sebelum membatalkan.</string>
+  <string name="cancellation_title_question">Kenapa kamu ingin membatalkan?</string>
+  <string name="cancellation_not_cooperative">Debitur tidak kooperatif</string>
+  <string name="cancellation_not_cooperative_other">Lingkungan tidak kondusif</string>
+  <string name="cancellation_not_suitable">Detail Kendaraan tidak cocok</string>
+  <string name="cancellation_other">Lainnya…</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

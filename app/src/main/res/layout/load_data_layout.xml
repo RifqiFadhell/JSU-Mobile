@@ -48,12 +48,21 @@
     android:id="@+id/imageUpload"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:srcCompat="@drawable/ic_add_image"
+    app:srcCompat="@drawable/ic_file"
     android:background="@android:color/transparent"
     android:layout_marginTop="@dimen/default_padding_margin_huge"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/textCaption" />
+
+  <ProgressBar
+    android:id="@+id/progress"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    app:layout_constraintStart_toStartOf="@id/imageUpload"
+    app:layout_constraintEnd_toEndOf="@id/imageUpload"
+    app:layout_constraintTop_toTopOf="@id/imageUpload"
+    app:layout_constraintBottom_toBottomOf="@id/imageUpload" />
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textCaptionLoading"

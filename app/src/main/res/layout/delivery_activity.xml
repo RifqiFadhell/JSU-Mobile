@@ -51,138 +51,315 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/default_padding_margin_h"
-    android:textSize="12sp"
     android:textColor="@color/frenchPass"
+    android:textSize="12sp"
     tools:text="628129192819"
     app:layout_constraintBottom_toBottomOf="@id/image"
     app:layout_constraintStart_toEndOf="@id/image" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textNameBuilding"
+  <ScrollView
+    android:id="@+id/scroll"
     android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="12dp"
-    android:layout_marginTop="8dp"
-    android:textSize="16sp"
-    android:textStyle="bold"
-    android:textColor="@color/ebonyClay"
-    tools:text="TSM Building"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/line"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/backgroundTop" />
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
 
-  <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideLine"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="@dimen/default_padding_margin_huge_xxx">
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textTitleOffice"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="12dp"
-    android:layout_marginTop="8dp"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:textSize="14sp"
-    android:text="Kantor Penerima"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/textNameBuilding" />
+      <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textOffice"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="12dp"
-    android:layout_marginTop="8dp"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:textSize="14sp"
-    android:textStyle="bold"
-    android:textColor="@color/ebonyClay"
-    tools:text="FIF Buandung"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/textTitleOffice" />
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textNameBuilding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/confirmation_title_office"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textTitlePic"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:textSize="14sp"
-    android:text="Nama PIC Cabang"
-    app:layout_constraintStart_toEndOf="@id/guideLine"
-    app:layout_constraintTop_toBottomOf="@id/textNameBuilding" />
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleOffice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="@string/confirmation_office"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNameBuilding" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textPic"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:textSize="14sp"
-    android:textStyle="bold"
-    android:textColor="@color/ebonyClay"
-    tools:text="Atang tangtang"
-    app:layout_constraintStart_toEndOf="@id/guideLine"
-    app:layout_constraintTop_toBottomOf="@id/textTitlePic" />
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textOffice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="FIF Buandung"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleOffice" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textTitleBranch"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="12dp"
-    android:layout_marginTop="@dimen/default_padding_margin_x"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:textSize="14sp"
-    android:text="Nama Cabang"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/textOffice" />
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitlePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="@string/confirmation_branch"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/textNameBuilding" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textBranch"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="12dp"
-    android:layout_marginTop="8dp"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:textSize="14sp"
-    tools:text="Jl. Maksarudin"
-    android:textStyle="bold"
-    android:textColor="@color/ebonyClay"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/textTitleBranch" />
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="Atang tangtang"
+        app:layout_constraintStart_toEndOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/textTitlePic" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textTitleNumberPic"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/default_padding_margin_x"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:text="Kontak PIC Cabang"
-    android:textSize="14sp"
-    app:layout_constraintStart_toEndOf="@id/guideLine"
-    app:layout_constraintTop_toBottomOf="@id/textPic"/>
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleBranch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="@string/confirmation_name_branch"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textOffice" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textNumberPic"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:drawablePadding="4dp"
-    android:padding="4dp"
-    android:layout_marginTop="@dimen/default_padding_margin"
-    android:text="Kontak PIC Cabang"
-    android:textSize="14sp"
-    android:textStyle="bold"
-    android:textColor="@color/ebonyClay"
-    app:layout_constraintStart_toEndOf="@id/guideLine"
-    app:layout_constraintTop_toBottomOf="@id/textTitleNumberPic"/>
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textBranch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="Jl. Maksarudin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleBranch" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleNumberPic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="@string/confirmation_number_branch"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/textPic" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textNumberPic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="621219218918"
+        app:layout_constraintStart_toEndOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/textTitleNumberPic" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:text="@string/confirmation_title_identification"
+        android:textColor="@color/ebonyClay"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textBranch"
+        app:layout_constraintStart_toStartOf="parent" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        app:startIconDrawable="@drawable/ic_user"
+        app:startIconTint="@color/dustyGray2">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/background_rounded_gray"
+          android:hint="@string/confirmation_input_name"
+          android:inputType="number"
+          android:textColor="@color/white"
+          android:textColorHint="@color/dustyGray2" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputName"
+        app:startIconDrawable="@drawable/ic_communication_white"
+        app:startIconTint="@color/dustyGray2">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editPhone"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/background_rounded_gray"
+          android:hint="@string/confirmation_input_phone"
+          android:inputType="number"
+          android:textColor="@color/white"
+          android:textColorHint="@color/dustyGray2" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputRole"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputPhone"
+        app:startIconDrawable="@drawable/ic_role"
+        app:startIconTint="@color/dustyGray2">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editRole"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/background_rounded_gray"
+          android:hint="@string/confirmation_input_role"
+          android:inputType="number"
+          android:textColor="@color/white"
+          android:textColorHint="@color/dustyGray2" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleAddOffice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:text="@string/confirmation_add_office"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textInputRole"
+        app:layout_constraintStart_toStartOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageOffice"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        tools:src="@drawable/ic_place_holder_image"
+        app:layout_constraintTop_toTopOf="@id/textTitleAddOffice"
+        app:layout_constraintBottom_toBottomOf="@id/textTitleAddOffice"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleAddReceiver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_xxxx"
+        android:text="@string/confirmation_title_receiver"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textTitleAddOffice"
+        app:layout_constraintStart_toStartOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageReceiver"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        tools:src="@drawable/ic_place_holder_image"
+        app:layout_constraintTop_toTopOf="@id/textTitleAddReceiver"
+        app:layout_constraintBottom_toBottomOf="@id/textTitleAddReceiver"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleAddNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_xxxx"
+        android:text="@string/confirmation_title_number"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textTitleAddReceiver"
+        app:layout_constraintStart_toStartOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageNumber"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        tools:src="@drawable/ic_place_holder_image"
+        app:layout_constraintTop_toTopOf="@id/textTitleAddNumber"
+        app:layout_constraintBottom_toBottomOf="@id/textTitleAddNumber"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

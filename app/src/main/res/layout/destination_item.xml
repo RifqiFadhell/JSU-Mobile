@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-  android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="256dp"
+  android:layout_height="200dp"
+  android:layout_marginStart="@dimen/default_padding_margin"
+  android:layout_marginEnd="@dimen/default_padding_margin"
+  android:background="@drawable/background_rounded_white"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNameCity"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:textColor="@color/ebonyClay"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:text="@string/confirmation_title_office"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textAddress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="8dp"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    tools:text="Jl.raya aja"
+    android:textSize="14sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textNameCity" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="12sp"
+    android:text="@string/delivery_title_time"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textAddress" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_small"
+    android:drawablePadding="4dp"
+    android:padding="4dp"
+    android:textSize="12sp"
+    tools:text="12:00 - 19:00"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleTime" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonSubmit"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:backgroundTint="@color/kournikova"
+    android:text="@string/delivery_button_title"
+    android:textAllCaps="false"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    app:layout_constraintTop_toBottomOf="@id/textTime"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

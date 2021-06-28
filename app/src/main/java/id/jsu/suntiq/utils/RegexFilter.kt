@@ -6,7 +6,7 @@ object RegexFilter {
     }
 
     fun splitFirstWordStrip(value: String): String {
-        val time = value.split("\\s*-\\s*".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        val time = value.split("\\s*:\\s*".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
 
         return time[0]
     }

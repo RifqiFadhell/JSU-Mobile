@@ -3,20 +3,20 @@
 
   <item
     android:id="@+id/homeDashboard"
-    android:icon="@drawable/ic_baseline_home_24"
-    android:title="Dashboard"
+    android:icon="@drawable/ic_dashboard"
+    android:title="Beranda"
     android:enabled="true"/>
 
   <item
-    android:id="@+id/homeVisitors"
-    android:icon="@drawable/ic_baseline_people_24"
-    android:title="Pengunjung"
+    android:id="@+id/homeHistory"
+    android:icon="@drawable/ic_search"
+    android:title="Riwayat"
     android:enabled="true"/>
 
   <item
-    android:id="@+id/homeBuildings"
-    android:icon="@drawable/ic_baseline_apartment_24"
-    android:title="Gedung"
+    android:id="@+id/homeProfile"
+    android:icon="@drawable/ic_user"
+    android:title="Profile"
     android:enabled="true"/>
 
 </menu>

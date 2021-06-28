@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class VehicleResponse(
 
 	@field:SerializedName("data")
-	val data: List<DataItem?>? = null,
+	val data: List<DataVehicle>? = null,
 
 	@field:SerializedName("message")
 	val message: String? = null,
@@ -14,7 +14,7 @@ data class VehicleResponse(
 	val status: Int? = null
 )
 
-data class DataItem(
+data class DataVehicle(
 
 	@field:SerializedName("police_number")
 	val policeNumber: String? = null,

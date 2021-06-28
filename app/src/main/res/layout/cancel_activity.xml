@@ -6,4 +6,201 @@
   android:layout_height="match_parent"
   tools:context=".ui.home.cancel.CancelActivity">
 
+  <View
+    android:id="@+id/backgroundTop"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/background_blue"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/line" />
+
+  <View
+    android:id="@+id/line"
+    android:layout_width="0dp"
+    android:layout_height="24dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    tools:src="@drawable/ic_place_holder"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    tools:text="Udin Petot"
+    app:layout_constraintTop_toTopOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPhone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textColor="@color/frenchPass"
+    android:textSize="12sp"
+    tools:text="628129192819"
+    app:layout_constraintBottom_toBottomOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textInformation"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lilyWhite"
+    android:padding="@dimen/default_padding_margin_x"
+    android:text="@string/home_result"
+    android:textAlignment="textStart"
+    android:textColor="@color/dustyGray2"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/backgroundTop" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="8dp"
+    android:text="@string/cancellation_title_question"
+    android:textColor="@color/ebonyClay"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInformation" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNotCooperative"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:background="@drawable/background_rounded_stroke_gray"
+    android:drawableStart="@drawable/ic_circle_gray"
+    android:drawablePadding="@dimen/default_padding_margin"
+    android:gravity="center"
+    android:paddingStart="@dimen/default_padding_margin_x"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:text="@string/cancellation_not_cooperative"
+    android:textAlignment="textStart"
+    android:textColor="@color/ebonyClay"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitle"
+    tools:ignore="RtlCompat" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNotCooperativeOther"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:background="@drawable/background_rounded_stroke_gray"
+    android:drawableStart="@drawable/ic_circle_gray"
+    android:drawablePadding="@dimen/default_padding_margin"
+    android:gravity="center"
+    android:paddingStart="@dimen/default_padding_margin_x"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:text="@string/cancellation_not_cooperative_other"
+    android:textAlignment="textStart"
+    android:textColor="@color/ebonyClay"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textNotCooperative"
+    tools:ignore="RtlCompat" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNotSuitable"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:background="@drawable/background_rounded_stroke_gray"
+    android:drawableStart="@drawable/ic_circle_gray"
+    android:drawablePadding="@dimen/default_padding_margin"
+    android:gravity="center"
+    android:paddingStart="@dimen/default_padding_margin_x"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:text="@string/cancellation_not_suitable"
+    android:textAlignment="textStart"
+    android:textColor="@color/ebonyClay"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textNotCooperativeOther"
+    tools:ignore="RtlCompat" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textOther"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:background="@drawable/background_rounded_stroke_gray"
+    android:drawableStart="@drawable/ic_circle_gray"
+    android:drawablePadding="@dimen/default_padding_margin"
+    android:gravity="center"
+    android:paddingStart="@dimen/default_padding_margin_x"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:text="@string/cancellation_other"
+    android:textAlignment="textStart"
+    android:textColor="@color/ebonyClay"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textNotSuitable"
+    tools:ignore="RtlCompat" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonNext"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/default_padding_margin_x"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:backgroundTint="@color/kournikova"
+    android:text="@string/next_label"
+    android:textAllCaps="false"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,8 +2,10 @@ package id.jsu.suntiq.utils
 
 import android.content.ContentProvider
 import android.content.ContentValues
+import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
+import com.yalantis.ucrop.UCrop
 import id.jsu.suntiq.BuildConfig
 
 class PhotoProvider : ContentProvider() {
@@ -43,5 +45,17 @@ class PhotoProvider : ContentProvider() {
 
     override fun getType(uri: Uri): String? {
         return null
+    }
+
+    fun getPhotoUri(file: Intent): Uri {
+        val outputUri = UCrop.getOutput(file)
+        val builder = Uri.Builder()
+            .authority(CONTENT_PROVIDER_AUTHORITY)
+            .scheme("file")
+            .path(outputUri?.path)
+            .query(outputUri?.query)
+            .fragment(outputUri?.fragment)
+
+        return builder.build()
     }
 }

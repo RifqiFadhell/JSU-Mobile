@@ -50,14 +50,13 @@ object DateUtils {
 
     fun getFormatedDateTime(
         dateStr: String,
-        strReadFormat: String,
-        strWriteFormat: String
+        strReadFormat: String
     ): String {
 
         var formattedDate = dateStr
 
         val readFormat = SimpleDateFormat(strReadFormat, Locale.getDefault())
-        val writeFormat = SimpleDateFormat(strWriteFormat, Locale.getDefault())
+        val writeFormat = SimpleDateFormat("EEE, dd MMMM yyyy", Locale.getDefault())
 
         var date: Date? = null
 

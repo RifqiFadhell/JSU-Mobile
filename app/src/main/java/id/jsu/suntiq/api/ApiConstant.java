@@ -1,4 +1,4 @@
-package com.spin.id.api;
+package id.jsu.suntiq.api;
 
 public interface ApiConstant {
 

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class DetailVehicleResponse(
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val data: DetailVehicle? = null,
 
 	@field:SerializedName("message")
 	val message: String? = null,
@@ -14,13 +14,13 @@ data class DetailVehicleResponse(
 	val status: Int? = null
 )
 
-data class Data(
+data class DetailVehicle(
 
 	@field:SerializedName("police_number")
 	val policeNumber: String? = null,
 
 	@field:SerializedName("leasing")
-	val leasing: Any? = null,
+	val leasing: String? = null,
 
 	@field:SerializedName("color")
 	val color: String? = null,

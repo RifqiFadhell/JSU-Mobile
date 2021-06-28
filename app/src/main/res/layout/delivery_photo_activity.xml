@@ -6,4 +6,335 @@
   android:layout_height="match_parent"
   tools:context=".ui.home.delivery.photo.DeliveryPhotoActivity">
 
+  <View
+    android:id="@+id/backgroundTop"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/background_blue"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/line" />
+
+  <View
+    android:id="@+id/line"
+    android:layout_width="0dp"
+    android:layout_height="24dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    tools:src="@drawable/ic_place_holder"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    tools:text="Udin Petot"
+    app:layout_constraintTop_toTopOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPhone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_h"
+    android:textColor="@color/frenchPass"
+    android:textSize="12sp"
+    tools:text="628129192819"
+    app:layout_constraintBottom_toBottomOf="@id/image"
+    app:layout_constraintStart_toEndOf="@id/image" />
+
+  <ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/line"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="@dimen/default_padding_margin_huge">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textInformation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/lilyWhite"
+        android:padding="@dimen/default_padding_margin_x"
+        android:text="@string/home_result"
+        android:textAlignment="textStart"
+        android:textColor="@color/dustyGray2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="8dp"
+        android:text="@string/delivery_form_title"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInformation" />
+
+      <View
+        android:id="@+id/circle1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:background="@drawable/ic_circle_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textPhotoTakeover"
+        app:layout_constraintTop_toTopOf="@id/textPhotoTakeover" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPhotoTakeover"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@drawable/background_rounded_stroke_gray"
+        android:drawableEnd="@drawable/ic_place_holder_image"
+        android:gravity="center"
+        android:paddingStart="@dimen/default_padding_margin_x"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:paddingEnd="@dimen/default_padding_margin_x"
+        android:paddingBottom="@dimen/default_padding_margin_h"
+        android:text="@string/delivery_form_photo_handover"
+        android:textAlignment="textStart"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle1"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        tools:ignore="RtlCompat" />
+
+      <View
+        android:id="@+id/circle2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:background="@drawable/ic_circle_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textPhotoUnit"
+        app:layout_constraintTop_toTopOf="@id/textPhotoUnit" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPhotoUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@drawable/background_rounded_stroke_gray"
+        android:gravity="top"
+        android:paddingStart="@dimen/default_padding_margin_x"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:paddingEnd="@dimen/default_padding_margin_x"
+        android:paddingBottom="@dimen/default_padding_margin_huge_xx"
+        android:text="@string/delivery_form_photo_unit"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle2"
+        app:layout_constraintTop_toBottomOf="@id/textPhotoTakeover" />
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listPhotoUnit"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin"
+        tools:listitem="@layout/unit_item"
+        tools:itemCount="4"
+        app:spanCount="4"
+        app:layout_constraintStart_toStartOf="@id/textPhotoUnit"
+        app:layout_constraintEnd_toEndOf="@id/textPhotoUnit"
+        app:layout_constraintBottom_toBottomOf="@id/textPhotoUnit"
+        app:layoutManager="GridLayoutManager" />
+
+      <View
+        android:id="@+id/circle3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:background="@drawable/ic_circle_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textPhotoSignature"
+        app:layout_constraintTop_toTopOf="@id/textPhotoSignature" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPhotoSignature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@drawable/background_rounded_stroke_gray"
+        android:drawableEnd="@drawable/ic_place_holder_image"
+        android:gravity="center"
+        android:paddingStart="@dimen/default_padding_margin_x"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:paddingEnd="@dimen/default_padding_margin_x"
+        android:paddingBottom="@dimen/default_padding_margin_h"
+        android:text="@string/delivery_form_photo_signature"
+        android:textAlignment="textStart"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle3"
+        app:layout_constraintTop_toBottomOf="@id/textPhotoUnit"
+        tools:ignore="RtlCompat" />
+
+      <View
+        android:id="@+id/circle4"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:background="@drawable/ic_circle_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textPhotoSign"
+        app:layout_constraintTop_toTopOf="@id/textPhotoSign" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPhotoSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@drawable/background_rounded_stroke_gray"
+        android:drawableEnd="@drawable/ic_place_holder_image"
+        android:gravity="center"
+        android:paddingStart="@dimen/default_padding_margin_x"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:paddingEnd="@dimen/default_padding_margin_x"
+        android:paddingBottom="@dimen/default_padding_margin_h"
+        android:text="@string/delivery_form_photo_sign"
+        android:textAlignment="textStart"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle4"
+        app:layout_constraintTop_toBottomOf="@id/textPhotoSignature"
+        tools:ignore="RtlCompat" />
+
+      <View
+        android:id="@+id/circle5"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:background="@drawable/ic_circle_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textPhotoWithUser"
+        app:layout_constraintTop_toTopOf="@id/textPhotoWithUser" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPhotoWithUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@drawable/background_rounded_stroke_gray"
+        android:drawableEnd="@drawable/ic_place_holder_image"
+        android:gravity="center"
+        android:paddingStart="@dimen/default_padding_margin_x"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:paddingEnd="@dimen/default_padding_margin_x"
+        android:paddingBottom="@dimen/default_padding_margin_h"
+        android:text="@string/delivery_form_photo_with_user"
+        android:textAlignment="textStart"
+        android:textColor="@color/ebonyClay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle5"
+        app:layout_constraintTop_toBottomOf="@id/textPhotoSign"
+        tools:ignore="RtlCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonCancel"
+      style="@style/SecondaryButton"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginTop="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_x"
+      android:paddingTop="@dimen/default_padding_margin_h"
+      android:paddingBottom="@dimen/default_padding_margin_h"
+      android:text="@string/cancel_label"
+      android:textAllCaps="false"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:strokeColor="@color/kournikova"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintEnd_toStartOf="@id/buttonSubmit" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonSubmit"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginTop="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_x"
+      android:backgroundTint="@color/kournikova"
+      android:paddingTop="@dimen/default_padding_margin_h"
+      android:paddingBottom="@dimen/default_padding_margin_h"
+      android:text="@string/next_label"
+      android:textAllCaps="false"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="@id/buttonCancel"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,52 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/introFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="id.jsu.suntiq.ui.MainActivity"
-        android:label="MainActivity"
-        tools:layout="@layout/main_activity"/>
+  <fragment
+    android:id="@+id/introFragment"
+    android:name="id.jsu.suntiq.ui.intro.IntroFragment"
+    android:label=""
+    tools:layout="@layout/intro_fragment">
+    <action
+      android:id="@+id/action_introFragment_to_registerFormFragment"
+      app:destination="@id/registerFormFragment" />
+    <action
+      android:id="@+id/action_introFragment_to_loginFragment"
+      app:destination="@id/loginFragment" />
+  </fragment>
 
-    <fragment
-        android:id="@+id/registerFormFragment"
-        android:name="id.jsu.suntiq.ui.intro.register.RegisterFormFragment"
-        android:label="register_form_fragment"
-        tools:layout="@layout/register_form_fragment" >
-        <action
-            android:id="@+id/action_registerFormFragment_to_completeRegisterFragment"
-            app:destination="@id/completeRegisterFragment" />
-        <action
-            android:id="@+id/action_registerFormFragment_to_introActivity"
-            app:destination="@id/introActivity" />
-    </fragment>
+  <fragment
+    android:id="@+id/registerFormFragment"
+    android:name="id.jsu.suntiq.ui.intro.register.RegisterFormFragment"
+    android:label=""
+    tools:layout="@layout/register_form_fragment">
+    <action
+      android:id="@+id/action_registerFormFragment_to_completeRegisterFragment"
+      app:destination="@id/completeRegisterFragment" />
+    <action android:id="@+id/action_registerFormFragment_to_introActivity" />
+    <action
+      android:id="@+id/action_registerFormFragment_to_introFragment"
+      app:destination="@id/introFragment" />
+  </fragment>
 
-    <fragment
-        android:id="@+id/completeRegisterFragment"
-        android:name="id.jsu.suntiq.ui.intro.register.CompleteRegisterFragment"
-        android:label="complete_register_fragment"
-        tools:layout="@layout/register_complete_fragment" >
-        <action
-            android:id="@+id/action_completeRegisterFragment_to_verifyRegisterActivity"
-            app:destination="@id/verifyRegisterActivity" />
-        <action
-            android:id="@+id/action_completeRegisterFragment_to_registerFormFragment2"
-            app:destination="@id/registerFormFragment" />
-    </fragment>
+  <fragment
+    android:id="@+id/completeRegisterFragment"
+    android:name="id.jsu.suntiq.ui.intro.register.CompleteRegisterFragment"
+    android:label=""
+    tools:layout="@layout/register_complete_fragment">
+    <action
+      android:id="@+id/action_completeRegisterFragment_to_verifyRegisterActivity"
+      app:destination="@id/verifyRegisterActivity" />
+    <action
+      android:id="@+id/action_completeRegisterFragment_to_registerFormFragment2"
+      app:destination="@id/registerFormFragment" />
+  </fragment>
 
-    <activity
-        android:id="@+id/verifyRegisterActivity"
-        android:name="id.jsu.suntiq.ui.intro.register.verify.VerifyRegisterActivity"
-        android:label="verify_register_activity"
-        tools:layout="@layout/register_verify_activity" />
+  <activity
+    android:id="@+id/verifyRegisterActivity"
+    android:name="id.jsu.suntiq.ui.intro.register.verify.VerifyRegisterActivity"
+    android:label=""
+    tools:layout="@layout/register_verify_activity" />
 
-    <activity
-        android:id="@+id/introActivity"
-        android:name="id.jsu.suntiq.ui.intro.IntroActivity"
-        android:label="intro_activity"
-        tools:layout="@layout/intro_activity" />
-
+  <fragment
+    android:id="@+id/loginFragment"
+    android:name="id.jsu.suntiq.ui.intro.login.LoginFragment"
+    android:label=""
+    tools:layout="@layout/login_fragment">
+    <action
+      android:id="@+id/action_loginFragment_to_introFragment"
+      app:destination="@id/introFragment" />
+    <action
+      android:id="@+id/action_loginFragment_to_registerFormFragment"
+      app:destination="@id/registerFormFragment" />
+  </fragment>
 </navigation>

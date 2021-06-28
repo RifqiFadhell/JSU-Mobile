@@ -9,7 +9,11 @@ import android.util.Base64
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.yalantis.ucrop.UCrop
+import id.jsu.suntiq.R
 import java.io.ByteArrayOutputStream
+import java.io.File
+import java.util.*
 
 
 class ImageUtils {
@@ -47,24 +51,24 @@ class ImageUtils {
             return Base64.encodeToString(b, Base64.DEFAULT)
         }
 
-//        fun createCropActivity(context: Context, uri: Uri): UCrop {
-//            val uCrop = UCrop.of(uri, Uri.fromFile(
-//                File(context.cacheDir, IMAGE_NAME + "-" + Calendar.getInstance().timeInMillis + ".jpg")
-//            ))
-//
-//            uCrop.withAspectRatio(1f, 1f)
-//            uCrop.withMaxResultSize(400, 400)
-//
-//            val options = UCrop.Options()
-//            options.setHideBottomControls(true)
-//            options.setCropFrameColor(context.resources.getColor(R.color.colorPrimary))
-//            options.setCropGridColor(context.resources.getColor(R.color.colorPrimary))
-//            options.setToolbarColor(context.resources.getColor(R.color.colorPrimary))
-//            options.setStatusBarColor(context.resources.getColor(R.color.colorPrimary))
-//            uCrop.withOptions(options)
-//
-//            return uCrop
-//        }
+        fun createCropActivity(context: Context, uri: Uri): UCrop {
+            val uCrop = UCrop.of(uri, Uri.fromFile(
+                File(context.cacheDir, IMAGE_NAME + "-" + Calendar.getInstance().timeInMillis + ".jpg")
+            ))
+
+            uCrop.withAspectRatio(1f, 1f)
+            uCrop.withMaxResultSize(400, 400)
+
+            val options = UCrop.Options()
+            options.setHideBottomControls(true)
+            options.setCropFrameColor(context.resources.getColor(R.color.colorPrimary))
+            options.setCropGridColor(context.resources.getColor(R.color.colorPrimary))
+            options.setToolbarColor(context.resources.getColor(R.color.colorPrimary))
+            options.setStatusBarColor(context.resources.getColor(R.color.colorPrimary))
+            uCrop.withOptions(options)
+
+            return uCrop
+        }
 
         fun loadImages(
             context: Context,

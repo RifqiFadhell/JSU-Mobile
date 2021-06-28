@@ -1,4 +1,4 @@
-package id.fadhell.project.absensi.ui.home.attendance
+package id.jsu.suntiq.ui.home.map
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import id.fadhell.project.absensi.R
+import id.jsu.suntiq.R
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -17,7 +17,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.maps_activity)
+        setContentView(R.layout.map_activity)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment

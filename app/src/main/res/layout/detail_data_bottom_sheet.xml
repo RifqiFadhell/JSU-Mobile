@@ -40,7 +40,7 @@
     app:layout_constraintStart_toStartOf="parent"/>
 
   <androidx.appcompat.widget.AppCompatImageView
-    android:id="@+id/image"
+    android:id="@+id/imageDialog"
     android:layout_width="48dp"
     android:layout_height="48dp"
     tools:src="@drawable/ic_place_holder"
@@ -58,8 +58,8 @@
     android:textStyle="bold"
     tools:text="F6521DP"
     android:textColor="@color/pictonBlue"
-    app:layout_constraintTop_toTopOf="@id/image"
-    app:layout_constraintStart_toEndOf="@id/image"/>
+    app:layout_constraintTop_toTopOf="@id/imageDialog"
+    app:layout_constraintStart_toEndOf="@id/imageDialog"/>
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textNameVehicle"
@@ -68,8 +68,8 @@
     android:textSize="12sp"
     android:layout_marginStart="@dimen/default_padding_margin_h"
     tools:text="F6521DP"
-    app:layout_constraintBottom_toBottomOf="@id/image"
-    app:layout_constraintStart_toEndOf="@id/image"/>
+    app:layout_constraintBottom_toBottomOf="@id/imageDialog"
+    app:layout_constraintStart_toEndOf="@id/imageDialog"/>
 
   <View
     android:id="@+id/background"
@@ -81,8 +81,8 @@
     android:layout_marginTop="@dimen/default_padding_margin_x"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/image"
-    app:layout_constraintBottom_toBottomOf="@id/textTitleFrom"/>
+    app:layout_constraintTop_toBottomOf="@id/imageDialog"
+    app:layout_constraintBottom_toBottomOf="@id/textTitleEngine"/>
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textTitleType"
@@ -93,7 +93,7 @@
     android:text="@string/home_type_bottom_sheet"
     android:textSize="14sp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/image" />
+    app:layout_constraintTop_toBottomOf="@id/imageDialog" />
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textTitleColor"
@@ -129,16 +129,27 @@
     app:layout_constraintTop_toBottomOf="@id/textTitleYear" />
 
   <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textTitleFrom"
+    android:id="@+id/textTitleCasing"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/default_padding_margin_xxx"
     android:layout_marginTop="8dp"
     android:text="@string/home_from_bottom_sheet"
     android:textSize="14sp"
-    android:paddingBottom="@dimen/default_padding_margin_x"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/textTitleLeasing" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleEngine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xxx"
+    android:layout_marginTop="8dp"
+    android:text="@string/home_engine_bottom_sheet"
+    android:textSize="14sp"
+    android:paddingBottom="@dimen/default_padding_margin_x"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textTitleCasing" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline"
@@ -156,7 +167,7 @@
     android:textColor="@color/black"
     android:textSize="14sp"
     app:layout_constraintStart_toEndOf="@id/guideline"
-    app:layout_constraintTop_toBottomOf="@id/image" />
+    app:layout_constraintTop_toBottomOf="@id/imageDialog" />
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textColor"
@@ -192,7 +203,7 @@
     app:layout_constraintTop_toBottomOf="@id/textYear" />
 
   <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/textFrom"
+    android:id="@+id/textCasing"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
@@ -201,6 +212,17 @@
     android:textSize="14sp"
     app:layout_constraintStart_toEndOf="@id/guideline"
     app:layout_constraintTop_toBottomOf="@id/textLeasing" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textEngine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+    android:textColor="@color/black"
+    android:textSize="14sp"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintTop_toBottomOf="@id/textCasing" />
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/textConfirmation"

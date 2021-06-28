@@ -11,6 +11,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import id.jsu.suntiq.R
+import id.jsu.suntiq.api.response.login.LoginResponse
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_PROFILE
+import id.jsu.suntiq.preference.tinyDb.TinyDB
 
 fun Context.getScreenWidthInDPs(): Int {
     val dm = DisplayMetrics()
@@ -79,4 +82,12 @@ fun Context.showYesNoDialog(
     alertBuilder = builder.create()
     alertBuilder.requestWindowFeature(Window.FEATURE_NO_TITLE)
     alertBuilder.show()
+}
+
+fun Context.getDataUser(): LoginResponse? {
+    var loginResponse: LoginResponse? = null
+    if ( TinyDB(this).getObject(TINY_PROFILE, LoginResponse::class.java) != null) {
+        loginResponse = TinyDB(this).getObject(TINY_PROFILE, LoginResponse::class.java)
+    }
+    return loginResponse
 }

@@ -1,4 +1,4 @@
-package id.fadhell.production.utils
+package id.jsu.suntiq.utils
 
 import android.content.Context
 import android.net.ConnectivityManager
