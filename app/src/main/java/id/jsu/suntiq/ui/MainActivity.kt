@@ -25,7 +25,7 @@ class MainActivity : BaseActivity() {
             topLevelDestinationIds = setOf(R.id.introFragment),
             fallbackOnNavigateUpListener = ::onSupportNavigateUp
         )
-        findViewById<Toolbar>(R.id.toolbar)
+        findViewById<Toolbar>(R.id.toolbarMain)
             .setupWithNavController(navController, appBarConfiguration)
 
         TinyDB(this).putString(TINY_IMEI, Settings.System.getString(this.contentResolver, Settings.Secure.ANDROID_ID))

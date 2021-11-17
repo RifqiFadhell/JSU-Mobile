@@ -6,6 +6,7 @@
   android:background="#72000000">
 
   <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/default_padding_margin_xx"

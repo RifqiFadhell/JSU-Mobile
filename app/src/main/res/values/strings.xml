@@ -15,6 +15,7 @@
   <string name="photo_uploaded">Photo Uploaded</string>
   <string name="duty_letter">Surat Tugas</string>
   <string name="duty_letter_title">Lakukan Foto dikantor</string>
+  <string name="download_bastk_button">Download Bastk</string>
 
   <string name="forgot_password_label">Request Password</string>
   <string name="forgot_password_title">Forgot Password</string>
@@ -86,7 +87,7 @@
   <string name="confirmation_add_photo_id">Tambahkan Foto STNK</string>
   <string name="confirmation_add_location">Tentukan Lokasi Pengantaran Kendaraan</string>
   <string name="confirmation_hint_add_location">Masukkan lokasi</string>
-  <string name="confirmation_button_next">Antar Unit</string>
+  <string name="confirmation_button_next">Proses Unit</string>
   <string name="confirmation_title_identification">Identitas Penerima</string>
   <string name="confirmation_input_name">Nama Penerima</string>
   <string name="confirmation_input_phone">Nomor Hp Penerima</string>
@@ -101,14 +102,18 @@
   <string name="confirmation_number_branch">Kontak PIC Cabang</string>
 
   <!--Delivery-->
-  <string name="delivery_button_title">Mulai Pengantaran</string>
+  <string name="delivery_button_title">Pilih Pengantaran</string>
+  <string name="delivery_button_selected_title">Pengantaran Terpilih</string>
+  <string name="delivery_button_start_title">Mulai Pengantaran</string>
   <string name="delivery_title">Lokasi Pengantaran</string>
   <string name="delivery_title_time">Jam Operasional :</string>
+  <string name="delivery_button_my_location">Lihat Titik</string>
 
   <!-- Form-->
   <string name="delivery_form_title">Unggah Foto Serah Terima Kendaraan</string>
   <string name="delivery_form_photo_handover">Foto serah terima kendaraan</string>
   <string name="delivery_form_photo_unit">Foto unit 4 sisi</string>
+  <string name="delivery_form_caption">Lengkapi data dibawah ini untuk melakukan verifikasi.</string>
   <string name="delivery_form_photo_signature">Foto saat tanda tangan BASTK</string>
   <string name="delivery_form_photo_sign">Foto BASTK yang telah ditandatangani ketiga pihak (Penerima, Mitra Pemilik) Kendaraan.</string>
   <string name="delivery_form_photo_with_user">Foto bersama Penerima, Mitra, Pemilik (beserta) kendaraannya di depan kantor</string>
@@ -120,7 +125,9 @@
   <string name="cancellation_not_cooperative_other">Lingkungan tidak kondusif</string>
   <string name="cancellation_not_suitable">Detail Kendaraan tidak cocok</string>
   <string name="cancellation_other">Lainnya…</string>
-  <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
+
+  <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">Face Recognition</string>
+  <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
 
 </resources>

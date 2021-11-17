@@ -11,11 +11,9 @@ import com.readystatesoftware.chuck.internal.ui.MainActivity
 import com.squareup.picasso.Picasso
 import id.jsu.suntiq.R
 import id.jsu.suntiq.api.response.register.DataRegister
-import id.jsu.suntiq.api.response.register.RegisterResponse
 import id.jsu.suntiq.api.response.register.verify.VerifyResponse
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_REGISTER
 import id.jsu.suntiq.preference.tinyDb.TinyDB
-import id.jsu.suntiq.ui.home.HomeActivity
 import id.jsu.suntiq.utils.LoaderIndicatorHelper
 import id.jsu.suntiq.utils.base.BaseActivity
 import id.jsu.suntiq.utils.extensions.*

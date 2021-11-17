@@ -1,10 +1,12 @@
 package id.jsu.suntiq.utils
+import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.provider.MediaStore
 import android.util.Base64
 import android.widget.ImageView
 import com.bumptech.glide.Glide

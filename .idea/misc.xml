@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_refresh.xml" value="0.3963541666666667" />
+        <entry key="app/src/main/res/drawable/ic_share.xml" value="0.3026041666666667" />
+        <entry key="app/src/main/res/drawable/ic_share_white.xml" value="0.3026041666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="app/src/main/res/layout/button_bottom_confirmation.xml" value="0.3802083333333333" />
+        <entry key="app/src/main/res/layout/cancel_activity.xml" value="0.4296875" />
+        <entry key="app/src/main/res/layout/cancel_item.xml" value="0.3802083333333333" />
+        <entry key="app/src/main/res/layout/confirmation_vehicle_activity.xml" value="0.3983739837398374" />
+        <entry key="app/src/main/res/layout/delivery_activity.xml" value="0.3802083333333333" />
+        <entry key="app/src/main/res/layout/delivery_photo_activity.xml" value="0.22685185185185186" />
+        <entry key="app/src/main/res/layout/dialog.xml" value="0.5703125" />
+        <entry key="app/src/main/res/layout/duty_letter_activity.xml" value="0.32109375" />
+        <entry key="app/src/main/res/layout/final_confirmation_activity.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/general_loading_dialog.xml" value="0.32109375" />
+        <entry key="app/src/main/res/layout/general_simple_loading_dialog.xml" value="0.5703125" />
+        <entry key="app/src/main/res/layout/header.xml" value="0.3802083333333333" />
+        <entry key="app/src/main/res/layout/home_fragment.xml" value="1.319178603031627" />
+        <entry key="app/src/main/res/layout/item_page.xml" value="0.5703125" />
+        <entry key="app/src/main/res/layout/loading_view.xml" value="0.5703125" />
+        <entry key="app/src/main/res/layout/main_activity.xml" value="0.36614583333333334" />
+        <entry key="app/src/main/res/layout/map_activity.xml" value="0.5703125" />
+        <entry key="app/src/main/res/layout/toolbar_main.xml" value="0.3802083333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

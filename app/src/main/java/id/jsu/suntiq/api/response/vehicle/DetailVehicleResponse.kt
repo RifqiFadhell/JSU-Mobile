@@ -1,6 +1,7 @@
 package id.jsu.suntiq.api.response.vehicle
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class DetailVehicleResponse(
 
@@ -51,4 +52,4 @@ data class DetailVehicle(
 
 	@field:SerializedName("status")
 	val status: String? = null
-)
+): Serializable

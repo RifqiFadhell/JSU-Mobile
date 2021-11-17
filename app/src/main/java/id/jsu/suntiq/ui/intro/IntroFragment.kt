@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import id.jsu.suntiq.R
-import id.jsu.suntiq.utils.extensions.toGone
 import kotlinx.android.synthetic.main.intro_fragment.*
-import kotlinx.android.synthetic.main.toolbar.*
 
 class IntroFragment : Fragment() {
 
@@ -33,11 +31,13 @@ class IntroFragment : Fragment() {
 
     private fun initListener() {
         buttonRegister.setOnClickListener {
-            NavHostFragment.findNavController(this).navigate(R.id.action_introFragment_to_registerFormFragment)
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_introFragment_to_registerFormFragment)
         }
 
         textGoLogin.setOnClickListener {
-            NavHostFragment.findNavController(this).navigate(R.id.action_introFragment_to_loginFragment)
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_introFragment_to_loginFragment)
         }
     }
 }

@@ -10,6 +10,7 @@ import id.jsu.suntiq.R
 import id.jsu.suntiq.api.request.login.LoginRequest
 import id.jsu.suntiq.api.response.login.LoginResponse
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_PROFILE
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TOKEN
 import id.jsu.suntiq.preference.tinyDb.TinyDB
 import id.jsu.suntiq.ui.home.HomeActivity
 import id.jsu.suntiq.ui.intro.register.verify.VerifyRegisterActivity
@@ -76,6 +77,7 @@ class LoginFragment : BaseFragment(), LoginContract.View {
         when (response.status) {
             200 -> {
                 TinyDB(requireContext()).putObject(TINY_PROFILE, response.data?.user)
+                TinyDB(requireContext()).putObject(TINY_TOKEN, "Bearer ${response.data?.token}")
                 requireActivity().goToActivity(HomeActivity::class.java)
                 requireActivity().finishAffinity()
             }

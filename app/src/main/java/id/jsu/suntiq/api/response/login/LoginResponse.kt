@@ -6,14 +6,16 @@ data class LoginResponse(
 )
 
 data class User(
-	val placeOfBirth: String? = null,
-	val nik: String? = null,
-	val bank: String? = null,
-	val bankAccountNumber: String? = null,
-	val dateOfBirth: String? = null,
-	val phoneNumber: String? = null,
-	val id: Int? = null,
-	val username: String? = null
+	val place_of_birth: String? = "",
+	val imei: String? = "",
+	val nik: String? = "",
+	val bank: String? = "",
+	val bank_account_number: String? = "",
+	val date_of_birth: String? = "",
+	val phone_number: String? = "",
+	val id: Int? = 0,
+	val username: String? = "",
+	val photo_url: String? = ""
 )
 
 data class Data(

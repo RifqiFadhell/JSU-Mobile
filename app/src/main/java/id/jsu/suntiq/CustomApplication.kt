@@ -6,7 +6,12 @@ import com.google.gson.GsonBuilder
 import com.readystatesoftware.chuck.ChuckInterceptor
 import id.jsu.suntiq.api.ApiConstant
 import id.jsu.suntiq.api.ApiFactory
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TOKEN
+import id.jsu.suntiq.preference.tinyDb.TinyDB
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -26,6 +31,10 @@ class CustomApplication : MultiDexApplication() {
 
         val httpClient: OkHttpClient.Builder = OkHttpClient.Builder()
             .addInterceptor(interceptor)
+            .addInterceptor(Interceptor { chain ->
+                val request: Request = chain.request().newBuilder().addHeader("Authorization", TinyDB(applicationContext).getString(TINY_TOKEN).orEmpty()).build()
+                chain.proceed(request)
+            })
             .addNetworkInterceptor(ChuckInterceptor(app))
             .connectTimeout(ApiConstant.TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(ApiConstant.TIMEOUT, TimeUnit.SECONDS)

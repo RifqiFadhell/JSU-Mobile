@@ -11,8 +11,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import id.jsu.suntiq.R
-import id.jsu.suntiq.api.response.login.LoginResponse
+import id.jsu.suntiq.api.response.login.User
+import id.jsu.suntiq.api.response.vehicle.confirmation.DataConfirmation
+import id.jsu.suntiq.api.response.vehicle.delivery.DataDelivery
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_PROFILE
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TEMPORARY_DATA_CONFIRM
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TEMPORARY_DATA_CONFIRM_DELIVERY
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TOKEN
 import id.jsu.suntiq.preference.tinyDb.TinyDB
 
 fun Context.getScreenWidthInDPs(): Int {
@@ -84,10 +89,34 @@ fun Context.showYesNoDialog(
     alertBuilder.show()
 }
 
-fun Context.getDataUser(): LoginResponse? {
-    var loginResponse: LoginResponse? = null
-    if ( TinyDB(this).getObject(TINY_PROFILE, LoginResponse::class.java) != null) {
-        loginResponse = TinyDB(this).getObject(TINY_PROFILE, LoginResponse::class.java)
+fun Context.getDataUser(): User? {
+    var loginResponse: User? = null
+    if (TinyDB(this).getObject(TINY_PROFILE, User::class.java) != null) {
+        loginResponse = TinyDB(this).getObject(TINY_PROFILE, User::class.java)
     }
     return loginResponse
+}
+
+fun Context.getToken(): String? {
+    var token: String? = ""
+    if ( TinyDB(this).getString(TINY_TOKEN) != null) {
+        token = TinyDB(this).getString(TINY_TOKEN)
+    }
+    return token
+}
+
+fun Context.getDataExistingProgress(): DataConfirmation? {
+    var data: DataConfirmation? = null
+    if (TinyDB(this).getObject(TINY_TEMPORARY_DATA_CONFIRM, DataConfirmation::class.java) != null) {
+        data = TinyDB(this).getObject(TINY_TEMPORARY_DATA_CONFIRM, DataConfirmation::class.java)
+    }
+    return data
+}
+
+fun Context.getDataExistingProgressDelivery(): DataDelivery? {
+    var data: DataDelivery? = null
+    if (TinyDB(this).getObject(TINY_TEMPORARY_DATA_CONFIRM_DELIVERY, DataDelivery::class.java) != null) {
+        data = TinyDB(this).getObject(TINY_TEMPORARY_DATA_CONFIRM_DELIVERY, DataDelivery::class.java)
+    }
+    return data
 }

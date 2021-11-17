@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  android:id="@+id/layoutItem"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textItem"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:background="@drawable/background_rounded_stroke_gray"
+    android:drawableStart="@drawable/ic_circle_gray"
+    android:drawablePadding="@dimen/default_padding_margin"
+    android:gravity="center"
+    android:paddingStart="@dimen/default_padding_margin_x"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin_x"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:textAlignment="textStart"
+    android:textColor="@color/ebonyClay"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="RtlCompat"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

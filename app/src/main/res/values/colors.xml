@@ -14,6 +14,7 @@
     <color name="lilyWhite">#E8F8FF</color>
     <color name="zumthor">#ECF5FF</color>
 
+    <color name="tfe_semi_transparent">#66000000</color>
     <color name="black">#FF000000</color>
     <color name="cinder">#12121B</color>
     <color name="vulcan">#151821</color>
