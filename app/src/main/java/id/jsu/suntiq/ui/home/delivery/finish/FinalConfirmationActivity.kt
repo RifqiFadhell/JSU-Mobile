@@ -21,6 +21,7 @@ import com.squareup.picasso.Picasso
 import id.jsu.suntiq.R
 import id.jsu.suntiq.api.request.vehicle.confirmation.FinishConfirmationRequest
 import id.jsu.suntiq.api.response.vehicle.finish.FinishConfirmationResponse
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_DATA_SUCCESS
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TEMPORARY_DATA_CONFIRM
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TEMPORARY_DATA_CONFIRM_DELIVERY
 import id.jsu.suntiq.preference.tinyDb.TinyDB
@@ -154,6 +155,8 @@ class FinalConfirmationActivity: BaseActivity(), FinishConfirmationContract.View
             showOkDialog("Data berhasil terkirim dan akan segera diproses...", "Oke", DialogInterface.OnClickListener { _, _ ->
                 gotoDashboard()
             })
+        } else {
+            showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 

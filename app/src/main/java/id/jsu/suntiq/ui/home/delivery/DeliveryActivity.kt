@@ -137,6 +137,8 @@ class DeliveryActivity : BaseActivity(), DeliveryContract.View {
             TinyDB(this).putObject(TINY_TEMPORARY_DATA_CONFIRM_DELIVERY, response.data)
             goToActivity(FinalConfirmationActivity::class.java)
             finish()
+        } else {
+            showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 

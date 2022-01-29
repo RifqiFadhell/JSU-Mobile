@@ -35,15 +35,17 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-  <!--<androidx.appcompat.widget.AppCompatImageView
-    android:id="@+id/imageProfile"
-    android:layout_width="32dp"
-    android:layout_height="32dp"
-    android:layout_marginEnd="@dimen/default_padding_margin_x"
-    app:srcCompat="@drawable/ic_place_holder"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="@id/textWelcome"
-    app:layout_constraintBottom_toBottomOf="@id/textWelcome" />-->
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTotalData"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textWelcome" />
 
   <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/buttonLogout"
@@ -63,7 +65,7 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/default_padding_margin_x"
-    android:layout_marginTop="@dimen/default_padding_margin_xxh"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
     android:layout_marginEnd="@dimen/default_padding_margin_x"
     android:background="@drawable/background_rounded_gray"
     android:hint="@string/home_input_search"
@@ -71,7 +73,7 @@
     app:hintTextColor="@color/dustyGray2"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/textWelcome">
+    app:layout_constraintTop_toBottomOf="@id/textTotalData">
 
     <androidx.appcompat.widget.AppCompatEditText
       android:id="@+id/editSearch"

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.jsu.suntiq.R
 import id.jsu.suntiq.api.response.vehicle.cancel.CancelResponse
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_DATA_SUCCESS
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TEMPORARY_DATA_CONFIRM
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TEMPORARY_DATA_CONFIRM_DELIVERY
 import id.jsu.suntiq.preference.tinyDb.TinyDB
@@ -87,9 +88,12 @@ class CancelActivity : BaseActivity(), CancelContract.View {
             showOkDialog("Proses sukses di batalkan", "Oke", DialogInterface.OnClickListener { dialog, which ->
                 TinyDB(this).remove(TINY_TEMPORARY_DATA_CONFIRM)
                 TinyDB(this).remove(TINY_TEMPORARY_DATA_CONFIRM_DELIVERY)
+                TinyDB(this).remove(TINY_DATA_SUCCESS)
                 goToActivity(HomeActivity::class.java)
                 finishAffinity()
             })
+        } else {
+            showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 

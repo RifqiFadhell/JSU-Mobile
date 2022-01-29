@@ -65,7 +65,9 @@
       android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
     <activity android:name=".ui.MainActivity" />
-    <activity android:name=".ui.home.cancel.CancelActivity" />
+    <activity
+      android:name=".ui.home.cancel.CancelActivity"
+      android:windowSoftInputMode="adjustNothing" />
     <activity android:name=".ui.home.map.MapActivity" />
     <activity
       android:name=".ui.home.delivery.DeliveryActivity"

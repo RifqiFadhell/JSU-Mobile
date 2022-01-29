@@ -32,7 +32,7 @@ class DashboardPresenter(private val view: DashboardContract.View) : DashboardCo
 
     private fun validateData(page: Int) {
         if (page != totalPage) {
-            allData(500, page + 1)
+            allData(5000, page + 1)
         } else {
             sendCompleteData()
         }

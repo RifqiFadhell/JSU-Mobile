@@ -21,6 +21,8 @@ import id.jsu.suntiq.api.response.vehicle.StatusUpdateResponse
 import id.jsu.suntiq.api.response.vehicle.VehicleResponse
 import id.jsu.suntiq.preference.room.DataDatabase
 import id.jsu.suntiq.preference.room.DataEntity
+import id.jsu.suntiq.preference.tinyDb.TinyConstant
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_DATA_SUCCESS
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_PROFILE
 import id.jsu.suntiq.preference.tinyDb.TinyDB
 import id.jsu.suntiq.ui.MainActivity
@@ -62,6 +64,7 @@ import kotlinx.android.synthetic.main.home_fragment.layoutLoading
 import kotlinx.android.synthetic.main.home_fragment.layoutLoadingSync
 import kotlinx.android.synthetic.main.home_fragment.list
 import kotlinx.android.synthetic.main.home_fragment.textResult
+import kotlinx.android.synthetic.main.home_fragment.textTotalData
 import kotlinx.android.synthetic.main.home_fragment.textWelcome
 
 
@@ -118,6 +121,24 @@ class DashboardFragment : BaseFragment(), DashboardContract.View {
             R.string.home_title,
             tinyDB?.getObject(TINY_PROFILE, User::class.java)?.username.toString()
         )
+        compositeDisposable.add(
+            dataDatabase!!.dataDao().getAllData()
+                .subscribeOn(Schedulers.computation())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe {
+                    textTotalData.text = "Total Data Kendaraan: ${it.size}"
+                }
+        )
+        if (!TinyDB(requireContext()).getString(TINY_DATA_SUCCESS).isNullOrEmpty()) {
+            compositeDisposable.add(Observable.fromCallable {
+                dataDatabase?.dataDao()?.deleteData("%${TinyDB(requireContext()).getString(TINY_DATA_SUCCESS)}%")
+            }
+                .subscribeOn(Schedulers.computation())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe {
+                    TinyDB(requireContext()).remove(TINY_DATA_SUCCESS)
+                })
+        }
     }
 
     override fun initListener(bundle: Bundle?) {
@@ -230,7 +251,7 @@ class DashboardFragment : BaseFragment(), DashboardContract.View {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe {
                     if (it.isNullOrEmpty()) {
-                        presenter?.allData(500, 0)
+                        presenter?.allData(5000, 1)
                         showLoading()
                     }
                 }
@@ -264,6 +285,8 @@ class DashboardFragment : BaseFragment(), DashboardContract.View {
     override fun getDetailVehicle(response: DetailVehicleResponse) {
         if (response.status == 200) {
             response.data?.let { setDetailVehicle(it) }
+        } else {
+            requireContext().showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 
@@ -278,7 +301,7 @@ class DashboardFragment : BaseFragment(), DashboardContract.View {
         bottomDialog.textType.text = data.type
         bottomDialog.textColor.text = data.color
         bottomDialog.textYear.text = ""
-        bottomDialog.textLeasing.text = data.leasing
+        bottomDialog.textLeasing.text = data.leasing?.leasingName
         bottomDialog.textCasing.text = data.chassingNumber
         bottomDialog.textEngine.text = data.machineNumber
         bottomDialog.show()
@@ -287,7 +310,7 @@ class DashboardFragment : BaseFragment(), DashboardContract.View {
 
     override fun getStatusUpdate(response: StatusUpdateResponse) {
         if (response.data?.syncStatus.orEmpty() != "complete") {
-            presenter?.allData(500, 0)
+            presenter?.allData(5000, 0)
             compositeDisposable.add(Observable.fromCallable {
                 dataDatabase?.dataDao()?.deleteAll()
             }

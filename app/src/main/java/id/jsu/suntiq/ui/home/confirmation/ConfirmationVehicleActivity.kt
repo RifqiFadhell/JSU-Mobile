@@ -5,6 +5,8 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.PorterDuff
+import android.net.Uri
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -16,6 +18,7 @@ import id.jsu.suntiq.api.response.location.LocationItem
 import id.jsu.suntiq.api.response.location.LocationResponse
 import id.jsu.suntiq.api.response.vehicle.DetailVehicle
 import id.jsu.suntiq.api.response.vehicle.confirmation.ConfirmationVehicleResponse
+import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_DATA_SUCCESS
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_LOCATION
 import id.jsu.suntiq.preference.tinyDb.TinyConstant.TINY_TEMPORARY_DATA_CONFIRM
 import id.jsu.suntiq.preference.tinyDb.TinyDB
@@ -35,7 +38,9 @@ import pl.aprilapps.easyphotopicker.EasyImage
 import pl.aprilapps.easyphotopicker.MediaFile
 import pl.aprilapps.easyphotopicker.MediaSource
 import java.io.File
+import java.lang.StringBuilder
 import java.util.*
+import kotlinx.android.synthetic.main.header.view.backgroundTop
 import kotlinx.coroutines.launch
 
 class ConfirmationVehicleActivity : BaseActivity(), ConfirmationVehicleContract.View {
@@ -79,6 +84,7 @@ class ConfirmationVehicleActivity : BaseActivity(), ConfirmationVehicleContract.
         presenter = ConfirmationVehiclePresenter(this)
         tinyDb = TinyDB(this)
         tinyDb?.remove(TINY_LOCATION)
+        buttonNavigation.toGone()
     }
 
     override fun initData(bundle: Bundle?) {
@@ -109,6 +115,23 @@ class ConfirmationVehicleActivity : BaseActivity(), ConfirmationVehicleContract.
         editLocation.setOnClickListener {
             goToActivity(MapActivity::class.java)
         }
+
+        buttonNavigation.setOnClickListener {
+            openMapDestination()
+        }
+    }
+
+    private fun openMapDestination() {
+        if (dataLocation != null) {
+            val dataLocation = dataLocation?.coordinate?.replace(".", "")
+            val location = dataLocation?.split(",")?.toTypedArray().orEmpty()
+            val latitude = StringBuilder(location[0]).insert(2, ".").toString().toDouble()
+            val longitude = StringBuilder(location[1]).insert(3, ".").toString().toDouble()
+            val navigation: Uri = Uri.parse("google.navigation:q=$latitude, $longitude")
+            val navigationIntent = Intent(Intent.ACTION_VIEW, navigation)
+            navigationIntent.setPackage("com.google.android.apps.maps")
+            startActivity(navigationIntent)
+        }
     }
 
     private fun validate() {
@@ -132,6 +155,7 @@ class ConfirmationVehicleActivity : BaseActivity(), ConfirmationVehicleContract.
         val data = response.data?.docs?.suratJalan
         val intent = Intent(this, DutyLetterActivity::class.java)
         intent.putExtra("docs", data)
+        tinyDb?.putString(TINY_DATA_SUCCESS, dataVehicle?.policeNumber)
         tinyDb?.putObject(TINY_TEMPORARY_DATA_CONFIRM, response.data)
         startActivity(intent)
     }
@@ -142,7 +166,7 @@ class ConfirmationVehicleActivity : BaseActivity(), ConfirmationVehicleContract.
         textType.text = dataVehicle?.type
         textColor.text = dataVehicle?.color
         textYear.text = "-"
-        textLeasing.text = dataVehicle?.leasing
+        textLeasing.text = dataVehicle?.leasing?.leasingName
         textName.text = getDataUser()?.username
         textPhone.text = getDataUser()?.phone_number
     }
@@ -152,6 +176,8 @@ class ConfirmationVehicleActivity : BaseActivity(), ConfirmationVehicleContract.
     override fun getDataConfirmation(response: ConfirmationVehicleResponse) {
         if (response.status == 200) {
             saveData(response)
+        } else {
+            showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 
@@ -297,6 +323,7 @@ class ConfirmationVehicleActivity : BaseActivity(), ConfirmationVehicleContract.
         if (data != null) {
             dataLocation = data
             editLocation.setText(data.branchAddress.toString())
+            buttonNavigation.toVisible()
         }
     }
 

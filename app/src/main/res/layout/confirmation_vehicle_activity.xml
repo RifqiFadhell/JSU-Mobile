@@ -24,53 +24,6 @@
       android:layout_height="wrap_content"
       android:paddingBottom="@dimen/default_padding_margin_huge_xxx">
 
-      <!--<androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/ebonyClay"
-        android:layout_marginTop="@dimen/default_padding_margin_x"
-        android:layout_marginStart="@dimen/default_padding_margin_x"
-        android:text="@string/confirmation_title"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-      <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonMotorCycle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        style="@style/SecondaryButton"
-        app:icon="@drawable/ic_uncheck"
-        app:iconTint="@color/wildSand"
-        android:layout_marginTop="@dimen/default_padding_margin_x"
-        android:layout_marginEnd="@dimen/default_padding_margin"
-        android:paddingTop="@dimen/default_padding_margin_h"
-        android:paddingBottom="@dimen/default_padding_margin_h"
-        android:text="@string/confirmation_motorcycle"
-        android:layout_marginStart="@dimen/default_padding_margin_x"
-        app:layout_constraintEnd_toStartOf="@id/buttonCar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textTitle"/>
-
-      <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonCar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        style="@style/SecondaryButton"
-        app:icon="@drawable/ic_uncheck"
-        app:iconTint="@color/wildSand"
-        android:layout_marginTop="@dimen/default_padding_margin_x"
-        android:layout_marginStart="@dimen/default_padding_margin"
-        android:paddingTop="@dimen/default_padding_margin_h"
-        android:paddingBottom="@dimen/default_padding_margin_h"
-        android:text="@string/confirmation_car"
-        android:layout_marginEnd="@dimen/default_padding_margin_x"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/buttonMotorCycle"
-        app:layout_constraintTop_toBottomOf="@id/textTitle"/>-->
-
       <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textTitleInformation"
         android:layout_width="0dp"
@@ -334,11 +287,30 @@
       </com.google.android.material.textfield.TextInputLayout>
 
       <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginBottom="@dimen/default_padding_margin_x"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:paddingBottom="@dimen/default_padding_margin_h"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:backgroundTint="@color/kournikova"
+        android:text="Buka Navigasi"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textInputLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+      <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonCancel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/SecondaryButton"
-        android:layout_marginTop="@dimen/default_padding_margin_xx"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
         android:layout_marginBottom="@dimen/default_padding_margin_x"
         android:layout_marginStart="@dimen/default_padding_margin_x"
         android:layout_marginEnd="@dimen/default_padding_margin_x"
@@ -349,7 +321,7 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/textInputLocation"
+        app:layout_constraintTop_toBottomOf="@id/buttonNavigation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -359,7 +331,7 @@
         android:id="@+id/buttonSubmit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/default_padding_margin_xx"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
         android:layout_marginBottom="@dimen/default_padding_margin_x"
         android:layout_marginStart="@dimen/default_padding_margin_x"
         android:layout_marginEnd="@dimen/default_padding_margin_x"
@@ -370,7 +342,7 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/textInputLocation"
+        app:layout_constraintTop_toBottomOf="@id/buttonNavigation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/buttonCancel"
         app:layout_constraintEnd_toEndOf="parent"/>

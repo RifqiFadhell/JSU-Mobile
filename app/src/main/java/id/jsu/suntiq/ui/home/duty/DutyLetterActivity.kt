@@ -8,6 +8,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
@@ -49,12 +50,18 @@ class DutyLetterActivity : BaseActivity() {
 
     override fun initListener(bundle: Bundle?) {
         buttonShare.setOnClickListener {
+            /* TODO
             val bitmap = reader_view.getBitmapFromView()
             val uri = bitmap.convertToUri(this)
             val intent = Intent(Intent.ACTION_SEND)
             intent.putExtra(Intent.EXTRA_STREAM, uri)
             intent.type = "image/jpeg"
-            startActivity(intent)
+            startActivity(intent)*/
+            val browserIntent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(imageUrl)
+            )
+            startActivity(browserIntent)
         }
 
         buttonCancel.setOnClickListener {

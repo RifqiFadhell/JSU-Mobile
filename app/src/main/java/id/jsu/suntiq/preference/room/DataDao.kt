@@ -21,4 +21,7 @@ interface DataDao {
 
     @Query("SELECT * FROM vehicle WHERE policeNumber LIKE :value LIMIT 25")
     fun searchData(value: String): Flowable<List<DataEntity>>
+
+    @Query("DELETE from vehicle WHERE policeNumber LIKE :value")
+    fun deleteData(value: String)
 }

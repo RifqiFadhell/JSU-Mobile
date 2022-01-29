@@ -43,6 +43,27 @@
     app:layout_constraintEnd_toEndOf="parent">
 
     <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonNext"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_x"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:paddingBottom="@dimen/default_padding_margin_h"
+      android:paddingTop="@dimen/default_padding_margin_h"
+      android:backgroundTint="@color/kournikova"
+      android:text="Lanjutkan Proses"
+      android:textAllCaps="false"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:maxLines="1"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/buttonSubmit"/>
+
+    <com.google.android.material.button.MaterialButton
       android:id="@+id/buttonSubmit"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -53,13 +74,14 @@
       android:paddingBottom="@dimen/default_padding_margin_h"
       android:paddingTop="@dimen/default_padding_margin_h"
       android:backgroundTint="@color/kournikova"
-      android:text="@string/delivery_button_start_title"
+      android:text="Ke Navigasi"
       android:textAllCaps="false"
+      android:maxLines="1"
       android:textColor="@color/black"
       android:textStyle="bold"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintStart_toEndOf="@id/buttonNext"
       app:layout_constraintEnd_toEndOf="parent"/>
   </androidx.constraintlayout.widget.ConstraintLayout>
 

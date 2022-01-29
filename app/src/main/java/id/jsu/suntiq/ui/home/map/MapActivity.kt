@@ -94,6 +94,11 @@ class MapActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMyLocationBu
             TinyDB(this).putObject(TINY_LOCATION, dataLocation)
             finish()
         }
+
+        buttonNext.setOnClickListener {
+            TinyDB(this).putObject(TINY_LOCATION, dataLocation)
+            finish()
+        }
     }
 
     override fun getDataConfirmation(response: ConfirmationVehicleResponse) {}
@@ -104,6 +109,8 @@ class MapActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMyLocationBu
             val navigationIntent = Intent(Intent.ACTION_VIEW, navigation)
             navigationIntent.setPackage("com.google.android.apps.maps")
             startActivity(navigationIntent)
+        } else {
+            showOkDialog("Pilih Pengantaran", "Oke", null)
         }
     }
 
@@ -133,6 +140,8 @@ class MapActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMyLocationBu
             response.data?.let { list.addAll(it) }
             adapter?.notifyDataSetChanged()
             hideLoading()
+        } else {
+            showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 

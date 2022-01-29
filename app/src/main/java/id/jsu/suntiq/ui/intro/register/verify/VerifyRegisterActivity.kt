@@ -115,6 +115,8 @@ class VerifyRegisterActivity : BaseActivity(), VerifyContract.View {
         if (response.status == 200) {
             layoutId.toGone()
             layoutSuccess.toVisible()
+        } else {
+            showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 

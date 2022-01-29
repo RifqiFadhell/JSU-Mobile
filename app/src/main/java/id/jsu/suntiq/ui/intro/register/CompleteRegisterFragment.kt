@@ -177,6 +177,8 @@ class CompleteRegisterFragment : BaseFragment(), RegisterContract.View {
             TinyDB(requireContext()).putObject(TINY_REGISTER, response.data)
             requireActivity().goToActivity(VerifyRegisterActivity::class.java)
             requireActivity().finish()
+        } else {
+            requireContext().showOkDialog(response.message.orEmpty(), "Oke", null)
         }
     }
 
